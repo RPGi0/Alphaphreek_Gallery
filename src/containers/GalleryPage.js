@@ -17,7 +17,7 @@ const images = [
   }
 ];
 
-const DashboardPage = () => {
+const GalleryPage = () => {
   return (
     <div>
       <h3 style={globalStyles.navigation}>Gallery</h3>
@@ -31,4 +31,4 @@ const DashboardPage = () => {
   );
 };
 
-export default DashboardPage;
+export default GalleryPage;

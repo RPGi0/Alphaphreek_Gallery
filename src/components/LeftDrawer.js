@@ -1,5 +1,4 @@
-import clear
-React,  { PropTypes } from 'react';
+import React,  { PropTypes } from 'react';
 import Drawer from 'material-ui/Drawer';
 import {spacing, typography} from 'material-ui/styles';
 import {white, blue600} from 'material-ui/styles/colors';
@@ -28,7 +27,7 @@ const LeftDrawer = (props) => {
     avatar: {
       div: {
         padding: '15px 0 20px 15px',
-        backgroundImage:  'url(' + require('../images/new mandala banner copy.png') + ')',
+        backgroundImage:  'url(' + require('../images/Mandala.png') + ')',
         height: 45
       },
       icon: {
@@ -52,10 +51,10 @@ const LeftDrawer = (props) => {
       docked={true}
       open={navDrawerOpen}>
         <div style={styles.logo}>
-          Material Admin
+          Alphaphreek
         </div>
         <div style={styles.avatar.div}>
-          <Avatar src="../images/new mandala banner copy.png"
+          <Avatar src="../images/Mandala.png"
                   size={50}
                   style={styles.avatar.icon}/>
           <span style={styles.avatar.span}>{props.username}</span>
