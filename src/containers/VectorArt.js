@@ -20,7 +20,7 @@ const images = [
 const VectorArt = () => {
   return (
     <div>
-      <h3 style={globalStyles.navigation}>Vector Art</h3>
+      <h1 style={globalStyles.navigation}>Vector Art</h1>
 
       <div className="row clearfix">
         <div className="col-xs-12 col-sm-12 m-b-15 ">

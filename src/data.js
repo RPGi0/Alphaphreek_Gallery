@@ -12,12 +12,6 @@ const data = {
     { text: 'Custom Clothing', icon: <Brush/>, link: '/custom-clothing-painted-hats' },
     { text: 'Contact', icon: <ContactMail/>, link: '/contact' },
   ],
-  aboutPage: {
-    items: []
-  },
-  galleryPage: {
-
-  }
 };
 
 export default data;

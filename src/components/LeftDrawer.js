@@ -53,12 +53,6 @@ const LeftDrawer = (props) => {
         <div style={styles.logo}>
           Alphaphreek
         </div>
-        <div style={styles.avatar.div}>
-          <Avatar src="../images/Mandala.png"
-                  size={50}
-                  style={styles.avatar.icon}/>
-          <span style={styles.avatar.span}>{props.username}</span>
-        </div>
         <div>
           {props.menus.map((menu, index) =>
             <MenuItem
@@ -70,6 +64,12 @@ const LeftDrawer = (props) => {
             />
           )}
         </div>
+      <div style={styles.avatar.div}>
+        <Avatar src="../images/Mandala.png"
+                size={210}
+                style={styles.avatar.icon}/>
+        {/*<span style={styles.avatar.span}>{props.username}</span>*/}
+      </div>
     </Drawer>
   );
 };
