@@ -17,10 +17,10 @@ const images = [
   }
 ];
 
-const GalleryPage = () => {
+const Clothing = () => {
   return (
     <div>
-      <h3 style={globalStyles.navigation}>Gallery</h3>
+      <h3 style={globalStyles.navigation}>Traditional Media</h3>
 
       <div className="row clearfix">
         <div className="col-xs-12 col-sm-12 m-b-15 ">
@@ -31,4 +31,4 @@ const GalleryPage = () => {
   );
 };
 
-export default GalleryPage;
+export default Clothing;

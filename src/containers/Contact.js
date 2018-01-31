@@ -32,7 +32,7 @@ const FormPage = () => {
   };
 
   return (
-    <PageBase title="Form Page"
+    <PageBase title="Contact"
               navigation="Application / Form Page">
       <form>
 
