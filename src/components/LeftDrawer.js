@@ -27,7 +27,7 @@ const LeftDrawer = (props) => {
     avatar: {
       div: {
         padding: '15px 0 20px 15px',
-        backgroundImage:  'url(' + require('../images/material_bg.png') + ')',
+        backgroundImage:  'url(' + require('../images/new mandala banner copy.png') + ')',
         height: 45
       },
       icon: {
@@ -54,7 +54,7 @@ const LeftDrawer = (props) => {
           Material Admin
         </div>
         <div style={styles.avatar.div}>
-          <Avatar src="http://www.material-ui.com/images/uxceo-128.jpg"
+          <Avatar src="../images/new mandala banner copy.png"
                   size={50}
                   style={styles.avatar.icon}/>
           <span style={styles.avatar.span}>{props.username}</span>

@@ -5,7 +5,7 @@ import NotFoundPage from './containers/NotFoundPage.js';
 import LoginPage from './containers/LoginPage';
 import FormPage from './containers/FormPage';
 import TablePage from './containers/TablePage';
-import Dashboard from './containers/DashboardPage';
+import Dashboard from './containers/Gallery';
 
 export default (
   <Route>
