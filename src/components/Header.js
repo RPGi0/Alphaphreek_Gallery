@@ -27,6 +27,7 @@ class Header extends React.Component {
     return (
         <div>
             <AppBar
+              title="The Artwork of Charles Van Heteren"
               style={{...styles, ...style.appBar}}
               iconElementLeft={
                   <IconButton style={style.menuButton} onClick={handleChangeRequestNavDrawer}>

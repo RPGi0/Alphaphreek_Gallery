@@ -5,8 +5,8 @@ import NotFoundPage from './containers/NotFoundPage.js';
 import Contact from './containers/Contact';
 import TraditionalMedia from './containers/TraditionalMedia';
 import Paintings from './containers/Paintings';
-import Clothing from './containers/Paintings';
-import VectorArt from './containers/Paintings';
+import Clothing from './containers/Clothing';
+import VectorArt from './containers/VectorArt';
 
 export default (
   <Route>

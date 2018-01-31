@@ -1,16 +1,16 @@
 import React from 'react';
-import Assessment from 'material-ui/svg-icons/action/assessment';
-import GridOn from 'material-ui/svg-icons/image/grid-on';
-// import PermIdentity from 'material-ui/svg-icons/action/perm-identity';
-import Web from 'material-ui/svg-icons/av/web';
+import Brush from 'material-ui/svg-icons/image/brush';
+import Create from 'material-ui/svg-icons/content/create';
+import DesktopWindows from 'material-ui/svg-icons/hardware/desktop-windows';
+import ContactMail from 'material-ui/svg-icons/communication/contact-mail';
 
 const data = {
   menus: [
-    { text: 'Paintings', icon: <Assessment/>, link: '/paintings' },
-    { text: 'Traditional Media', icon: <Assessment/>, link: '/traditional-media' },
-    { text: 'Vector Artwork', icon: <Assessment/>, link: '/vector-artwork' },
-    { text: 'Custom Clothing', icon: <Assessment/>, link: '/custom-clothing-painted-hats' },
-    { text: 'Contact', icon: <Web/>, link: '/contact' },
+    { text: 'Paintings', icon: <Brush/>, link: '/paintings' },
+    { text: 'Traditional Media', icon: <Create/>, link: '/traditional-media' },
+    { text: 'Vector Artwork', icon: <DesktopWindows/>, link: '/vector-artwork' },
+    { text: 'Custom Clothing', icon: <Brush/>, link: '/custom-clothing-painted-hats' },
+    { text: 'Contact', icon: <ContactMail/>, link: '/contact' },
   ],
   aboutPage: {
     items: []
