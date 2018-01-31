@@ -1,4 +1,5 @@
-import React,  { PropTypes } from 'react';
+import clear
+React,  { PropTypes } from 'react';
 import Drawer from 'material-ui/Drawer';
 import {spacing, typography} from 'material-ui/styles';
 import {white, blue600} from 'material-ui/styles/colors';
