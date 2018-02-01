@@ -1,92 +1,146 @@
 import React from 'react';
-// import {Link} from 'react-router';
-// import RaisedButton from 'material-ui/RaisedButton';
-// import MenuItem from 'material-ui/MenuItem';
-// import TextField from 'material-ui/TextField';
-// import SelectField from 'material-ui/SelectField';
-// import Toggle from 'material-ui/Toggle';
-// import DatePicker from 'material-ui/DatePicker';
-// import {grey400} from 'material-ui/styles/colors';
-// import Divider from 'material-ui/Divider';
+import {Link} from 'react-router';
+import RaisedButton from 'material-ui/RaisedButton';
+import {grey400} from 'material-ui/styles/colors';
 import PageBase from '../components/PageBase';
+import {ValidatorForm} from 'react-form-validator-core';
+import {TextValidator} from 'react-material-ui-form-validator';
 
-const FormPage = () => {
+export default class Contact extends React.Component {
+  constructor(props, context) {
+    super(props, context);
 
-  // const styles = {
-  //   toggleDiv: {
-  //     maxWidth: 300,
-  //     marginTop: 40,
-  //     marginBottom: 5
-  //   },
-  //   toggleLabel: {
-  //     color: grey400,
-  //     fontWeight: 100
-  //   },
-  //   buttons: {
-  //     marginTop: 30,
-  //     float: 'right'
-  //   },
-  //   saveButton: {
-  //     marginLeft: 5
-  //   }
-  // };
+    this.state = {
+      formData: {
+        email: '',
+        name: '',
+        telephone: '',
+        message: ''
+      },
+      submitted: false
+    };
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
 
-  return (
-    <PageBase title="Contact"
-              navigation="Application / Form Page">
-      <div>
-        <h1>For inquires regarding:</h1>
-        <ul>
-          <li>Booking</li>
-          <li>Purchases</li>
-          <li>Custom Orders</li>
-        </ul>
-        <p>Please submit an email to <a href="mailto:changadoobs@gmail.com">changadoobs@gmail.com</a>.</p>
-      </div>
-      {/*<form>*/}
+    this.styles = {
+      toggleDiv: {
+        maxWidth: 300,
+        marginTop: 40,
+        marginBottom: 5
+      },
+      toggleLabel: {
+        color: grey400,
+        fontWeight: 100
+      },
+      buttons: {
+        marginTop: 30,
+        float: 'right'
+      },
+      saveButton: {
+        marginLeft: 5
+      }
+    };
+  }
 
-        {/*<TextField*/}
-          {/*hintText="Name"*/}
-          {/*floatingLabelText="Name"*/}
-          {/*fullWidth={true}*/}
-        {/*/>*/}
+  onChange(event) {
+    const { formData } = this.state;
+    formData[event.target.name] = event.target.value;
+    this.setState({ formData });
+  }
 
-        {/*<SelectField*/}
-          {/*floatingLabelText="City"*/}
-          {/*value=""*/}
-          {/*fullWidth={true}>*/}
-          {/*<MenuItem key={0} primaryText="London"/>*/}
-          {/*<MenuItem key={1} primaryText="Paris"/>*/}
-          {/*<MenuItem key={2} primaryText="Rome"/>*/}
-        {/*</SelectField>*/}
+  onSubmit(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    this.setState({ submitted: true }, () => {
+      setTimeout(() => this.setState({ submitted: false }), 5000);
+    });
 
-        {/*<DatePicker*/}
-          {/*hintText="Expiration Date"*/}
-          {/*floatingLabelText="Expiration Date"*/}
-          {/*fullWidth={true}/>*/}
+    const domain = '@llnnll.com';
+    const subject = encodeURIComponent('Website contact from ' + this.state.formData.name);
+    const body = encodeURIComponent('You got a message from your website!\n' +
+      'Name: ' + this.state.formData.name + '\n' +
+      'E-mail: ' + this.state.formData.email + '\n' +
+      'Telephone: ' + (this.state.formData.telephone || 'None provided') + '\n' +
+      '\nMessage:\n' + this.state.formData.message + '\n');
+    const location = 'mailto:charlie' + domain + '?subject=' + subject + '&body=' + body;
 
-        {/*<div style={styles.toggleDiv}>*/}
-          {/*<Toggle*/}
-            {/*label="Disabled"*/}
-            {/*labelStyle={styles.toggleLabel}*/}
-          {/*/>*/}
-        {/*</div>*/}
+    window.open(location);
+  }
 
-        {/*<Divider/>*/}
+  render() {
+    const { formData, submitted } = this.state;
+    return (<PageBase
+        title="Contact"
+        navigation="Application / Form Page">
+        <div>
+          <ValidatorForm
+            ref="form"
+            onSubmit={this.onSubmit}>
+            <div>
+              <TextValidator
+                hintText="Name"
+                ref="name"
+                value={formData.name}
+                name="name"
+                floatingLabelText="Name"
+                onChange={this.onChange}
+                validators={['required']}
+                errorMessages={['This field is required']}
+              />
+            </div>
+            <div>
+              <TextValidator
+                hintText="E-mail"
+                ref="email"
+                value={formData.email}
+                name="email"
+                floatingLabelText="E-mail"
+                onChange={this.onChange}
+                validators={['required', 'isEmail']}
+                errorMessages={['This field is required', 'E-mail is not valid']}
+              />
+            </div>
+            <div>
+              <TextValidator
+                hintText="Telephone"
+                ref="telephone"
+                value={formData.telephone}
+                onChange={this.onChange}
+                name="telephone"
+                floatingLabelText="Telephone"
+              />
+            </div>
 
-        {/*<div style={styles.buttons}>*/}
-          {/*<Link to="/">*/}
-            {/*<RaisedButton label="Cancel"/>*/}
-          {/*</Link>*/}
+            <TextValidator
+              hintText="Message"
+              ref="message"
+              value={formData.message}
+              name="message"
+              onChange={this.onChange}
+              floatingLabelText="Message"
+              multiLine
+              validators={['required']}
+              errorMessages={['This field is required']}
+              fullWidth
+            />
 
-          {/*<RaisedButton label="Save"*/}
-                        {/*style={styles.saveButton}*/}
-                        {/*type="submit"*/}
-                        {/*primary={true}/>*/}
-        {/*</div>*/}
-      {/*</form>*/}
-    </PageBase>
-  );
-};
+            <div style={this.styles.buttons}>
+              <Link to="/">
+                <RaisedButton label="Cancel"/>
+              </Link>
 
-export default FormPage;
+              <RaisedButton
+                label={
+                  (submitted && 'Your message was sent!')
+                  || (!submitted && 'Send')
+                }
+                disabled={submitted}
+                style={this.styles.saveButton}
+                type="submit"
+                primary={true}/>
+            </div>
+          </ValidatorForm>
+        </div>
+      </PageBase>);
+  }
+}
