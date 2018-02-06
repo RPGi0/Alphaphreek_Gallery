@@ -1,234 +1,88 @@
-import React from 'react';
-import globalStyles from '../styles';
-import ImageGallery from 'react-image-gallery';
+import React, {Component} from "react";
+import Slider from "react-slick";
+import globalStyles from "../styles";
 
-const images = [
-  {
-    original: '/images/paintings/C_astro-selfie.jpg',
-    thumbnail: '/images/paintings/C_astro-selfie.jpg'
-  },
-  {
-    original: '/images/paintings/C_bright-stage.jpg',
-    thumbnail: '/images/paintings/C_bright-stage.jpg'
-  },
-  {
-    original: '/images/paintings/C_fire.jpg',
-    thumbnail: '/images/paintings/C_fire.jpg'
-  },
-  {
-    original: '/images/paintings/C_forest.jpg',
-    thumbnail: '/images/paintings/C_forest.jpg'
-  },
-  {
-    original: '/images/paintings/C_hurricane.jpg',
-    thumbnail: '/images/paintings/C_hurricane.jpg'
-  },
-  {
-    original: '/images/paintings/C_jason-portrait.jpg',
-    thumbnail: '/images/paintings/C_jason-portrait.jpg'
-  },
-  {
-    original: '/images/paintings/C_jason-portrait-close.jpg',
-    thumbnail: '/images/paintings/C_jason-portrait-close.jpg'
-  },
-  {
-    original: '/images/paintings/C_jose.jpg',
-    thumbnail: '/images/paintings/C_jose.jpg'
-  },
-  {
-    original: '/images/paintings/C_psp1.jpg',
-    thumbnail: '/images/paintings/C_psp1.jpg'
-  },
-  {
-    original: '/images/paintings/C_psp2.jpg',
-    thumbnail: '/images/paintings/C_psp2.jpg'
-  },
-  {
-    original: '/images/paintings/C_psp3.jpg',
-    thumbnail: '/images/paintings/C_psp3.jpg'
-  },
-  {
-    original: '/images/paintings/C_psp4.jpg',
-    thumbnail: '/images/paintings/C_psp4.jpg'
-  },
-  {
-    original: '/images/paintings/C_selfie-portrait.jpg',
-    thumbnail: '/images/paintings/C_selfie-portrait.jpg'
-  },
-  {
-    original: '/images/paintings/C_skyline.jpg',
-    thumbnail: '/images/paintings/C_skyline.jpg'
-  },
-  {
-    original: '/images/paintings/C_stratosphere.jpg',
-    thumbnail: '/images/paintings/C_stratosphere.jpg'
-  },
-  {
-    original: '/images/paintings/C_sunset.jpg',
-    thumbnail: '/images/paintings/C_sunset.jpg'
-  },
-  {
-    original: '/images/paintings/C_waves-paint1.jpg',
-    thumbnail: '/images/paintings/C_waves-paint1.jpg'
-  },
-  {
-    original: '/images/paintings/C_waves-paint2.jpg',
-    thumbnail: '/images/paintings/C_waves-paint2.jpg'
-  },
-  {
-    original: '/images/paintings/C_nebulea3.jpg',
-    thumbnail: '/images/paintings/C_nebulea3.jpg'
-  },
-  {
-    original: '/images/paintings/BL_nebulea1.jpg',
-    thumbnail: '/images/paintings/BL_nebulea1.jpg'
-  },
-  {
-    original: '/images/paintings/BL_nebulea2.jpg',
-    thumbnail: '/images/paintings/BL_nebulea2.jpg'
-  },
-  {
-    original: '/images/paintings/BL_deep-sea.jpg',
-    thumbnail: '/images/paintings/BL_deep-sea.jpg'
-  },
-  {
-    original: '/images/paintings/BL_fire-dance.jpg',
-    thumbnail: '/images/paintings/BL_fire-dance.jpg'
-  },
-  {
-    original: '/images/paintings/BL_green-orb.jpg',
-    thumbnail: '/images/paintings/BL_green-orb.jpg'
-  },
-  {
-    original: '/images/paintings/BL_jesus.jpg',
-    thumbnail: '/images/paintings/BL_jesus.jpg'
-  },
-  {
-    thumbnail: '/images/paintings/BL_light-bulb.jpg',
-    original: '/images/paintings/BL_light-bulb.jpg'
-  },
-  {
-    original: '/images/paintings/BL_reflected-face.jpg',
-    thumbnail: '/images/paintings/BL_reflected-face.jpg'
-  },
-  {
-    original: '/images/paintings/BL_uv-forest.jpg',
-    thumbnail: '/images/paintings/BL_uv-forest.jpg'
-  },
-  {
-    original: '/images/paintings/BL_kdiner.jpg',
-    thumbnail: '/images/paintings/BL_kdiner.jpg'
-  },
-  {
-    original: '/images/paintings/BL_kdiner-uv.jpg',
-    thumbnail: '/images/paintings/BL_kdiner-uv.jpg'
-  },
-  {
-    original: '/images/paintings/BL_mind-cave.jpg',
-    thumbnail: '/images/paintings/BL_mind-cave.jpg'
-  },
-  {
-    original: '/images/paintings/BL_mind-cave-uv.jpg',
-    thumbnail: '/images/paintings/BL_mind-cave-uv.jpg'
-  },
-  {
-    original: '/images/paintings/BL_to-the-moon.jpg',
-    thumbnail: '/images/paintings/BL_to-the-moon.jpg'
-  },
-  {
-    original: '/images/paintings/BL_to-the-moon-uv.jpg',
-    thumbnail: '/images/paintings/BL_to-the-moon-uv.jpg'
-  },
-  {
-    original: '/images/paintings/BL_tower.jpg',
-    thumbnail: '/images/paintings/BL_tower.jpg'
-  },
-  {
-    original: '/images/paintings/BL_tower-uv.jpg',
-    thumbnail: '/images/paintings/BL_tower-uv.jpg'
-  },
-  {
-    original: '/images/paintings/BL_trippy-head.jpg',
-    thumbnail: '/images/paintings/BL_trippy-head.jpg'
-  },
-  {
-    original: '/images/paintings/BL_trippy-head-uv.jpg',
-    thumbnail: '/images/paintings/BL_trippy-head-uv.jpg'
-  },
-  {
-    original: '/images/paintings/AB_cecils-board.jpg',
-    thumbnail: '/images/paintings/AB_cecils-board.jpg'
-  },
-  {
-    original: '/images/paintings/AB_dead-top.jpg',
-    thumbnail: '/images/paintings/AB_dead-top.jpg'
-  },
-  {
-    original: '/images/paintings/AB_fire-board.jpg',
-    thumbnail: '/images/paintings/AB_fire-board.jpg'
-  },
-  {
-    original: '/images/paintings/AB_grateful-dead-board.jpg',
-    thumbnail: '/images/paintings/AB_grateful-dead-board.jpg'
-  },
-  {
-    original: '/images/paintings/AB_greedy-pig.jpg',
-    thumbnail: '/images/paintings/AB_greedy-pig.jpg'
-  },
-  {
-    original: '/images/paintings/AB_ians-board.jpg',
-    thumbnail: '/images/paintings/AB_ians-board.jpg'
-  },
-  {
-    original: '/images/paintings/AB_ice-princess.jpg',
-    thumbnail: '/images/paintings/AB_ice-princess.jpg'
-  },
-  {
-    original: '/images/paintings/AB_jamies-board.jpg',
-    thumbnail: '/images/paintings/AB_jamies-board.jpg'
-  },
-  {
-    original: '/images/paintings/AB_mary-jane.jpg',
-    thumbnail: '/images/paintings/AB_mary-jane.jpg'
-  },
-  {
-    original: '/images/paintings/AB_Party-Girl.jpg',
-    thumbnail: '/images/paintings/AB_Party-Girl.jpg'
-  },
-  {
-    original: '/images/paintings/AB_Party-Girl-close.jpg',
-    thumbnail: '/images/paintings/AB_Party-Girl-close.jpg'
-  },
-  {
-    original: '/images/paintings/AB_wave-ripper.jpg',
-    thumbnail: '/images/paintings/AB_wave-ripper.jpg'
-  },
-  {
-    original: '/images/paintings/S_bunny-ears-aliens.jpg',
-    thumbnail: '/images/paintings/S_bunny-ears-aliens.jpg'
-  },
-  {
-    original: '/images/paintings/S_src-bus.jpg',
-    thumbnail: '/images/paintings/S_src-bus.jpg'
-  },
-  {
-    original: '/images/paintings/S_src-bus-long.jpg',
-    thumbnail: '/images/paintings/S_src-bus-long.jpg'
-  },
+class Paintings extends Component {
+  render() {
+    const settings = {
+      centerMode: true,
+      // centerPadding: '250px',
+      focusOnSelect: true,
+      dots: true,
+      dotsClass: "slick-dots slick-thumb",
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    };
+    return (
+      <div>
+        <h1 style={globalStyles.navigation}>Paintings</h1>
 
-];
+        <div>
+          <Slider {...settings}>
+            <div><img src="../slideshow/paintings/Canvas01.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas02.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas03.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas04.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas05.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas06.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas07.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas08.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas09.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas10.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas11.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas12.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas13.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas14.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas15.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas16.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas17.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas18.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas19.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas20.jpg"/></div>
+            <div><img src="../slideshow/paintings/Canvas21.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight01.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight02.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight03.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight04.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight05.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight06.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight07.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight08.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight09.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight10.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight11.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight12.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight13.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight14.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight15.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight16.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight17.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight18.jpg"/></div>
+            <div><img src="../slideshow/paintings/BlackLight19.jpg"/></div>
+            <div><img src="../slideshow/paintings/AirBrush01.jpg"/></div>
+            <div><img src="../slideshow/paintings/AirBrush02.jpg"/></div>
+            <div><img src="../slideshow/paintings/AirBrush03.jpg"/></div>
+            <div><img src="../slideshow/paintings/AirBrush04.jpg"/></div>
+            <div><img src="../slideshow/paintings/AirBrush05.jpg"/></div>
+            <div><img src="../slideshow/paintings/AirBrush06.jpg"/></div>
+            <div><img src="../slideshow/paintings/AirBrush07.jpg"/></div>
+            <div><img src="../slideshow/paintings/AirBrush08.jpg"/></div>
+            <div><img src="../slideshow/paintings/AirBrush09.jpg"/></div>
+            <div><img src="../slideshow/paintings/AirBrush10.jpg"/></div>
+            <div><img src="../slideshow/paintings/AirBrush11.jpg"/></div>
+            <div><img src="../slideshow/paintings/AirBrush12.jpg"/></div>
+            <div><img src="../slideshow/paintings/Spray01.jpg"/></div>
+            <div><img src="../slideshow/paintings/Spray02.jpg"/></div>
+            <div><img src="../slideshow/paintings/Spray03.jpg"/></div>
 
-const Paintings = () => {
-  return (
-    <div>
-      <div className="row clearfix image-container">
-        <div className="col-xs-12 col-sm-12 m-b-15 text-center">
-          <h3 style={globalStyles.navigation}>Paintings</h3>
-          <ImageGallery items={images} />
+          </Slider>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default Paintings;
+

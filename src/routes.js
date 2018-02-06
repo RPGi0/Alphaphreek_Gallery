@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import App from './containers/App';
-import NotFoundPage from './containers/NotFoundPage.js';
 import Contact from './containers/Contact';
 import TraditionalMedia from './containers/TraditionalMedia';
 import Paintings from './containers/Paintings';
@@ -17,7 +16,6 @@ export default (
       <Route path="vector-artwork" component={VectorArt}/>
       <Route path="custom-clothing-painted-hats" component={Clothing}/>
       <Route path="contact" component={Contact}/>
-      <Route path="*" component={NotFoundPage}/>
     </Route>
   </Route>
 );

@@ -1,4 +1,5 @@
-@import "../node_modules/react-image-gallery/styles/scss/image-gallery.scss";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 html {
   font-family: 'Roboto', sans-serif;
@@ -42,6 +43,10 @@ a:hover {
   position: fixed;
   top: 100px;
 }
+
+//.Cont {
+//  background-image: url("./images/new-mandala-banner.png");
+//}
 
 .image-gallery-slide.center {
   background: transparent;
