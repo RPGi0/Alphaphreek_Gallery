@@ -6,7 +6,7 @@ class VectorArt extends Component {
   render() {
     const settings = {
       centerMode: true,
-      // centerPadding: '250px',
+      centerPadding: '250px',
       focusOnSelect: true,
       dots: true,
       dotsClass: "slick-dots slick-thumb",
@@ -19,7 +19,7 @@ class VectorArt extends Component {
       <div>
         <h1 style={globalStyles.navigation}>Vector Art</h1>
 
-        <div>
+        <div className="container">
           <Slider {...settings}>
             <div><img src="../slideshow/vectors/Vectors01.jpg"/></div>
             <div><img src="../slideshow/vectors/Vectors02.jpg"/></div>

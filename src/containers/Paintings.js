@@ -6,7 +6,7 @@ class Paintings extends Component {
   render() {
     const settings = {
       centerMode: true,
-      // centerPadding: '250px',
+      centerPadding: '250px',
       focusOnSelect: true,
       dots: true,
       dotsClass: "slick-dots slick-thumb",
@@ -19,7 +19,7 @@ class Paintings extends Component {
       <div>
         <h1 style={globalStyles.navigation}>Paintings</h1>
 
-        <div>
+        <div className="container">
           <Slider {...settings}>
             <div><img src="../slideshow/paintings/Canvas01.jpg"/></div>
             <div><img src="../slideshow/paintings/Canvas02.jpg"/></div>

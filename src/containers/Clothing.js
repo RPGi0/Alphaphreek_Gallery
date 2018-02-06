@@ -6,7 +6,7 @@ class Clothing extends Component {
   render() {
     const settings = {
       centerMode: true,
-      // centerPadding: '250px',
+      centerPadding: '250px',
       focusOnSelect: true,
       dots: true,
       dotsClass: "slick-dots slick-thumb",
@@ -19,7 +19,7 @@ class Clothing extends Component {
       <div>
         <h1 style={globalStyles.navigation}>Custom Clothing</h1>
 
-        <div>
+        <div className="container">
           <Slider {...settings}>
             <div><img src="../slideshow/clothing/shirts/flower-shirt.jpg"/></div>
             <div><img src="../slideshow/clothing/shirts/kbert-shirt.jpg"/></div>

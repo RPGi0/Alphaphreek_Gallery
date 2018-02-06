@@ -44,16 +44,16 @@ a:hover {
   top: 100px;
 }
 
-//.Cont {
-//  background-image: url("./images/new-mandala-banner.png");
-//}
-
-.image-gallery-slide.center {
+.container{
+  margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+  color: #333;
   background: transparent;
 
-  .image-gallery-image {
+  .slides {
     max-height: calc(100vh - 300px);
-    position: relative;
+    //position: relative;
     text-align: center;
 
     img {
@@ -64,3 +64,4 @@ a:hover {
     }
   }
 }
+
