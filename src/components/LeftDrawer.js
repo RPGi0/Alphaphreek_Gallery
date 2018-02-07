@@ -1,7 +1,6 @@
 import React,  { PropTypes } from 'react';
 import Drawer from 'material-ui/Drawer';
-import {spacing, typography} from 'material-ui/styles';
-import {white, blue600} from 'material-ui/styles/colors';
+import {white} from 'material-ui/styles/colors';
 import MenuItem from 'material-ui/MenuItem';
 import {Link} from 'react-router';
 import Avatar from 'material-ui/Avatar';
@@ -10,24 +9,13 @@ const LeftDrawer = (props) => {
   let { navDrawerOpen } = props;
 
   const styles = {
-    logo: {
-      cursor: 'pointer',
-      fontSize: 22,
-      color: typography.textFullWhite,
-      lineHeight: `${spacing.desktopKeylineIncrement}px`,
-      fontWeight: typography.fontWeightLight,
-      backgroundColor: blue600,
-      paddingLeft: 40,
-      height: 56,
-    },
     menuItem: {
       color: white,
-      fontSize: 14
+      fontSize: 16
     },
     avatar: {
       div: {
         padding: '15px 0 20px 15px',
-        backgroundImage:  'url(' + require('../images/new-mandala-banner.png') + ')',
         height: 45
       },
       icon: {
@@ -49,11 +37,11 @@ const LeftDrawer = (props) => {
   return (
     <Drawer
       docked={true}
-      open={navDrawerOpen}>
-        <div style={styles.logo}>
-          Alphaphreek
-        </div>
-        <div>
+      open={navDrawerOpen}
+      style={{}}
+    >
+        <h2 className="alphaphreek">Alphaphreek</h2>
+        <div className="navigation">
           {props.menus.map((menu, index) =>
             <MenuItem
               key={index}
@@ -65,10 +53,9 @@ const LeftDrawer = (props) => {
           )}
         </div>
       <div style={styles.avatar.div}>
-        <Avatar src= "../images/new-mandala-banner.png"
-                size={220}
+        <Avatar src= "../images/alphaphreek.png"
+                size={200}
                 style={styles.avatar.icon}/>
-        {/*<span style={styles.avatar.span}>{props.username}</span>*/}
       </div>
     </Drawer>
   );

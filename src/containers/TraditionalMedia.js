@@ -1,26 +1,18 @@
 import React, {Component} from "react";
 import Slider from "react-slick";
 import globalStyles from "../styles";
+import {slickSettings} from '../data';
+
+// const {...settings} = slickSettings;
 
 class TraditionalMedia extends Component {
   render() {
-    const settings = {
-      centerMode: true,
-      centerPadding: '250px',
-      focusOnSelect: true,
-      dots: true,
-      dotsClass: "slick-dots slick-thumb",
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    };
     return (
       <div>
-        <h1 style={globalStyles.navigation}>Traditional Media</h1>
+        <h3 style={globalStyles.navigation}>Traditional Media</h3>
 
-        <div className="container">
-          <Slider {...settings}>
+        <div className="slick-container">
+          <Slider {...slickSettings}>
             <div><img src="../slideshow/traditional/Traditional01.jpg"/></div>
             <div><img src="../slideshow/traditional/Traditional02.jpg"/></div>
             <div><img src="../slideshow/traditional/Traditional03.jpg"/></div>

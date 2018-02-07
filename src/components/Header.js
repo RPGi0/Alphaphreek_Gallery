@@ -1,9 +1,9 @@
 import React, {PropTypes} from 'react';
-// import {Link} from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import {white} from 'material-ui/styles/colors';
+
 class Header extends React.Component {
 
   render() {
@@ -28,6 +28,7 @@ class Header extends React.Component {
         <div>
             <AppBar
               title="The Artwork of Charles Van Heteren"
+              className="main-header"
               style={{...styles, ...style.appBar}}
               iconElementLeft={
                   <IconButton style={style.menuButton} onClick={handleChangeRequestNavDrawer}>

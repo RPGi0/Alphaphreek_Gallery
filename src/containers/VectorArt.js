@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Slider from "react-slick";
 import globalStyles from "../styles";
+import {slickSettings} from "../data";
 
 class VectorArt extends Component {
   render() {
@@ -17,10 +18,10 @@ class VectorArt extends Component {
     };
     return (
       <div>
-        <h1 style={globalStyles.navigation}>Vector Art</h1>
+        <h3 style={globalStyles.navigation}>Vector Art</h3>
 
-        <div className="container">
-          <Slider {...settings}>
+        <div className="slick-container">
+          <Slider {...slickSettings}>
             <div><img src="../slideshow/vectors/Vectors01.jpg"/></div>
             <div><img src="../slideshow/vectors/Vectors02.jpg"/></div>
             <div><img src="../slideshow/vectors/Vectors03.jpg"/></div>

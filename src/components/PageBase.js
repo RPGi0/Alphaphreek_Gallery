@@ -9,7 +9,9 @@ const PageBase = (props) => {
 
     return (
       <div>
-        <span style={globalStyles.navigation}>{navigation}</span>
+        <span
+          className="navigation"
+        >{navigation}</span>
 
         <Paper style={globalStyles.paper}>
           <h3 style={globalStyles.title}>{title}</h3>
