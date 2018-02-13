@@ -71,7 +71,7 @@ export default class Contact extends React.Component {
     const { formData, submitted } = this.state;
     return (<PageBase
         title="Contact"
-        navigation="Application / Form Page">
+        navigation="Booking / Purchases">
         <div>
           <ValidatorForm
             ref="form"

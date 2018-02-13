@@ -53,9 +53,9 @@ a:hover {
       display: none;
     }
 
-    [data-index="0"].slick-active {
+    &[data-index="0"].slick-active {
       position: relative;
-      left: -400px;
+      left: -100px;
     }
 
     &.slick-center, &.slick-active, &.slick-current {
@@ -75,6 +75,13 @@ a:hover {
       left: -54px;
     }
   }
+}
+
+.slick-dots {
+  position: fixed;
+  bottom: 10px;
+  background-color: $lightest;
+  width: calc(100vw - 500px);
 }
 
 .navigation {
@@ -110,8 +117,20 @@ a:hover {
 
 h3 {
   font-size: 32px;
-  letter-spacing: .4em;
+  letter-spacing: .2em;
   text-align: center;
   font-family: $fontStack;
   font-weight: 300;
+}
+
+h4 {
+  font-size: 16px;
+  letter-spacing: .1em;
+  text-align: center;
+  font-family: $fontStack;
+  font-weight: 500;
+  margin-top: 8px;
+  font-style: italic;
+  opacity: 0.69;
+  color: $darkBrown;
 }

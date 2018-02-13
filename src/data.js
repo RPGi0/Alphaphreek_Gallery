@@ -17,7 +17,6 @@ export const data = {
 export const slickSettings = {
   centerMode: true,
   className: 'slick-slider',
-  // centerPadding: '250px',
   focusOnSelect: true,
   dots: true,
   dotsClass: "slick-dots slick-thumb",
