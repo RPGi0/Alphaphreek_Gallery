@@ -1,7 +1,8 @@
 {
-  "name": "react-material-admin-template",
+  "homepage": "http://RPGi0.github.io/Alphaphreek_Gallery",
+  "name": "alphaphreek",
   "version": "0.0.1",
-  "description": "Admin template using React and Material-UI",
+  "description": "Alphaphreek: the artwork of Charles van Heteren",
   "engines": {
     "npm": ">=3"
   },
@@ -14,19 +15,21 @@
     "clean-dist": "npm run remove-dist && mkdir dist",
     "remove-dist": "rimraf ./dist",
     "prebuild": "npm run clean-dist && npm run lint && npm run test",
-    "build": "babel-node tools/build.js && npm run open:dist",
+    "build": "babel-node tools/build.js",
     "test": "mocha tools/testSetup.js \"src/**/*.spec.js\" --reporter progress",
     "test:cover": "babel-node node_modules/isparta/bin/isparta cover --root src --report html node_modules/mocha/bin/_mocha -- --require ./tools/testSetup.js \"src/**/*.spec.js\" --reporter progress",
-    "test:cover:travis": "babel-node node_modules/isparta/bin/isparta cover --root src --report lcovonly _mocha -- --require ./tools/testSetup.js \"src/**/*.spec.js\" && cat ./coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
     "test:watch": "npm run test -- --watch",
-    "open:cover": "npm run test:cover && open coverage/index.html"
+    "open:cover": "npm run test:cover && open coverage/index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
-  "author": "Rafael Zeffa",
+  "author": "Robert Giovinozzo",
   "license": "MIT",
   "dependencies": {
     "flexboxgrid": "6.3.1",
     "font-awesome": "4.7.0",
     "history": "4.5.1",
+    "jquery": "3.3.1",
     "material-ui": "0.17.0",
     "react": "15.4.2",
     "react-dom": "15.4.2",
@@ -66,6 +69,7 @@
     "eslint-watch": "3.0.0",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.10.0",
+    "gh-pages": "1.1.0",
     "html-webpack-plugin": "2.22.0",
     "isparta": "4.0.0",
     "mocha": "3.2.0",
@@ -83,7 +87,7 @@
     "sinon-chai": "2.8.0",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
-    "webpack": "1.13.1",
+    "webpack": "1.15.0",
     "webpack-dev-middleware": "1.6.1",
     "webpack-hot-middleware": "2.12.2",
     "webpack-md5-hash": "0.0.5"
