@@ -68,6 +68,11 @@ class SliderWrapper extends React.Component {
   render() {
     return (
       <Slider ref={slider => this.slider = slider} {...slickSettings}>
+        <div><img src="../slideshow/paintings/Canvas22.jpg"/></div>
+        <div><img src="../slideshow/paintings/Canvas23.jpg"/></div>
+        <div><img src="../slideshow/paintings/Canvas24.jpg"/></div>
+        <div><img src="../slideshow/paintings/Canvas25.jpg"/></div>
+        <div><img src="../slideshow/paintings/Canvas26.jpg"/></div>
         <div><img src="../slideshow/paintings/Canvas01.jpg"/></div>
         <div><img src="../slideshow/paintings/Canvas02.jpg"/></div>
         <div><img src="../slideshow/paintings/Canvas03.jpg"/></div>
@@ -95,9 +100,6 @@ class SliderWrapper extends React.Component {
         <div><img src="../slideshow/paintings/BlackLight04.jpg"/></div>
         <div><img src="../slideshow/paintings/BlackLight05.jpg"/></div>
         <div><img src="../slideshow/paintings/BlackLight06.jpg"/></div>
-        <div><img src="../slideshow/paintings/BlackLight07.jpg"/></div>
-        <div><img src="../slideshow/paintings/BlackLight08.jpg"/></div>
-        <div><img src="../slideshow/paintings/BlackLight09.jpg"/></div>
         <div><img src="../slideshow/paintings/BlackLight10.jpg"/></div>
         <div><img src="../slideshow/paintings/BlackLight11.jpg"/></div>
         <div><img src="../slideshow/paintings/BlackLight12.jpg"/></div>

@@ -75,21 +75,13 @@ class SliderWrapper extends React.Component {
         <div><img src="../slideshow/vectors/Vectors04.jpg"/></div>
         <div><img src="../slideshow/vectors/Vectors05.jpg"/></div>
         <div><img src="../slideshow/vectors/Vectors06.jpg"/></div>
-        <div><img src="../slideshow/vectors/Vectors07.jpg"/></div>
         <div><img src="../slideshow/vectors/Vectors08.jpg"/></div>
         <div><img src="../slideshow/vectors/Vectors09.jpg"/></div>
-        <div><img src="../slideshow/vectors/Vectors10.jpg"/></div>
-        <div><img src="../slideshow/vectors/Vectors11.jpg"/></div>
         <div><img src="../slideshow/vectors/Vectors12.jpg"/></div>
         <div><img src="../slideshow/vectors/Vectors13.jpg"/></div>
-        <div><img src="../slideshow/vectors/Vectors14.jpg"/></div>
         <div><img src="../slideshow/vectors/Vectors15.jpg"/></div>
         <div><img src="../slideshow/vectors/Vectors16.jpg"/></div>
         <div><img src="../slideshow/vectors/Vectors17.jpg"/></div>
-        <div><img src="../slideshow/vectors/Vectors18.jpg"/></div>
-        <div><img src="../slideshow/vectors/Vectors19.jpg"/></div>
-        <div><img src="../slideshow/vectors/Vectors20.jpg"/></div>
-        <div><img src="../slideshow/vectors/Vectors21.jpg"/></div>
         <div><img src="../slideshow/vectors/Vectors22.jpg"/></div>
         <div><img src="../slideshow/vectors/Vectors23.jpg"/></div>
         <div><img src="../slideshow/vectors/Vectors24.jpg"/></div>
@@ -102,6 +94,24 @@ class SliderWrapper extends React.Component {
         <div><img src="../slideshow/vectors/Vectors31.jpg"/></div>
         <div><img src="../slideshow/vectors/Vectors32.jpg"/></div>
         <div><img src="../slideshow/vectors/Vectors33.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors34.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors35.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors36.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors37.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors38.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors39.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors40.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors41.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors42.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors43.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors44.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors45.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors46.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors47.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors48.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors49.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors50.jpg"/></div>
+        <div><img src="../slideshow/vectors/Vectors51.jpg"/></div>
       </Slider>
     );
   }
